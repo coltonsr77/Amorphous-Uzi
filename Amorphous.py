@@ -1167,7 +1167,7 @@ async def on_message(message):
             conversation.append({"role": "model", "parts": [{"text": llm_response}]})
             update_convo(conversation, guild_id)
         # --- END CHANGE 12 ---
-const port = process.env.PORT || 1000
+const port = process.env.PORT 1000
 
 
 client.run(token)
