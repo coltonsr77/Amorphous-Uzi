@@ -919,7 +919,8 @@ async def on_message(message):
         # --- END CHANGE 12 ---
 import socket
 
-    PORT = 1000        # Port to listen on (non-privileged ports are > 1023)
+    HOST = '0.0.0.0'  # Standard loopback interface address (localhost)
+    PORT = 1000     # Port to listen on (non-privileged ports are > 1023)
 
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
         s.bind((HOST, PORT))
@@ -932,6 +933,8 @@ import socket
                 if not data:
                     break
                 conn.sendall(data)
+
+    
 
 
 client.run(token)
